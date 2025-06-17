@@ -16,7 +16,11 @@ def get_codeline_count_dataset() -> pd.DataFrame:
     return results.to_dataframe()
 
 
-if __name__ == "__main__":
+def main():
     df = get_codeline_count_dataset()
     print(f"Total rows fetched: {len(df)}")
     print(df.head())
+
+
+if __name__ == "__main__":
+    main()

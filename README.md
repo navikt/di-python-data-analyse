@@ -10,3 +10,9 @@ Dette repositoriet kan brukes for å validere lokal pythonoppsett, og er ment so
 3. Installer [uv](https://docs.astral.sh/uv/getting-started/installation/) 
     - `brew install uv`
 4. `uv sync` - oppretter et virtuelt miljø og installerer avhengigheter
+
+
+## kjør scripts
+```bash
+uv run bigquery
+```
