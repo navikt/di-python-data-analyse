@@ -1,5 +1,5 @@
 [project]
-name = "di-python-data-analyse"
+name = "di_python_data_analyse"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
