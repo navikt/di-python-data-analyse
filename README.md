@@ -16,3 +16,7 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 I `__main__.py` ligger det kode som henter data fra et åpent datasett på BigQuery.
 Koden kan kjøres med `uv run python -m di_python_data_analyse`, eller med `uv run bigquery` som er definert under `[project.scripts]` i `pyproject.toml`.
 
+
+## Legg til en ny avhengighet
+
+Prøv å legge til en ny avhengighet i prosjektet og ta den i bruk i `__main__.py`.
