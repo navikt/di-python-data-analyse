@@ -10,3 +10,9 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 3. Klon repoet med [GitHub CLI](https://cli.github.com/).
 4. Opprett et virtuelt miljø og installer avhengigheter med `uv sync`.
 
+
+## Kjør et skript
+
+I `__main__.py` ligger det kode som henter data fra et åpent datasett på BigQuery.
+Koden kan kjøres med `uv run python -m di_python_data_analyse`, eller med `uv run bigquery` som er definert under `[project.scripts]` i `pyproject.toml`.
+
