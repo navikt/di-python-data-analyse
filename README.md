@@ -5,14 +5,5 @@ Dette repositoriet kan brukes for å validere lokal pythonoppsett, og er ment so
 
 ## Oppsett
 
-1. Sett opp maskinen https://navikt.github.io/ny-i-nav/ny-unix.html#tilgang-til-nais-plattformen
-2. Vi anbefaler å bruke [vscode](https://code.visualstudio.com/download)
-3. Installer [uv](https://docs.astral.sh/uv/getting-started/installation/) 
-    - `brew install uv`
-4. `uv sync` - oppretter et virtuelt miljø og installerer avhengigheter
-
-
-## kjør scripts
-```bash
-uv run bigquery
-```
+1. Sett opp maskinen ved å følge [Oppsett for ny Mac eller Linux](https://navikt.github.io/ny-i-nav/ny-unix.html) eller [Oppsett for ny Windows](https://navikt.github.io/ny-i-nav/ny-windows.html).
+2. Installer [VS Code](https://code.visualstudio.com/download).
