@@ -1,5 +1,5 @@
-from google.cloud import bigquery
 import pandas as pd
+from google.cloud import bigquery
 
 
 def get_codeline_count_dataset() -> pd.DataFrame:
