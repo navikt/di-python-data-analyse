@@ -6,9 +6,9 @@ def get_codeline_count_dataset() -> pd.DataFrame:
     client = bigquery.Client()
     query = """
         SELECT
-            insert_date, repository_visibility, language, blank_lines, comment_lines, code_lines
+            *
         FROM
-            `appsec-prod-624d.appsec.cloc`
+            `pensjon-saksbehandli-prod-1f83.teamkatalogen_historikk.aggregert_team_fartstid`
     """
     query_job = client.query(query)
     results = query_job.result()
