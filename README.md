@@ -10,6 +10,9 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 3. Installer uv med `brew install uv`.
 4. Klon repoet med [GitHub CLI](https://cli.github.com/).
 5. Kjør `uv sync` for å opprette et virtuelt miljø og installere avhengigheter.
+- nais login
+- gcloud projects list
+- gcloud config set project PROJECT_ID
 
 
 ## Kjør et skript
