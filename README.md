@@ -9,7 +9,7 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 2. Installer [VS Code](https://code.visualstudio.com/download).
 3. Installer uv med `brew install uv`.
 4. Klon repoet med [GitHub CLI](https://cli.github.com/).
-5. Opprett et virtuelt miljø og installer avhengigheter med `uv sync`.
+5. Kjør `uv sync` for å opprette et virtuelt miljø og installere avhengigheter.
 
 
 ## Kjør et skript
