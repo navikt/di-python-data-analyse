@@ -7,12 +7,14 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 
 1. Sett opp maskinen ved å følge [Oppsett for ny Mac eller Linux](https://navikt.github.io/ny-i-nav/ny-unix.html) eller [Oppsett for ny Windows](https://navikt.github.io/ny-i-nav/ny-windows.html).
 2. Installer [VS Code](https://code.visualstudio.com/download).
-3. Installer uv med `brew install uv`.
-4. Klon repoet med [GitHub CLI](https://cli.github.com/).
-5. Kjør `uv sync` for å opprette et virtuelt miljø og installere avhengigheter.
-- nais login
+3. Klon repoet med [GitHub CLI](https://cli.github.com/).
+4. Installer **just** med `brew install just`. Les mer om [just](https://github.com/casey/just).
+5. Kjør `just install` og du er klar til å kjøre scripts.
+- Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
+6. Kjør `nais login` og velg riktig prosjekt om du skal jobbe mot GCP.
 - gcloud projects list
 - gcloud config set project PROJECT_ID
+
 
 
 ## Kjør et skript
@@ -24,3 +26,6 @@ Koden kan kjøres med `uv run python -m di_python_data_analyse`, eller med `uv r
 ## Legg til en ny avhengighet
 
 Prøv å legge til en ny avhengighet i prosjektet og ta den i bruk i `__main__.py`.
+
+## Kort om nais og gcp
+For at du skal kunne kjøre spørringer mot BigQuery, så må du logge inn på et Google Cloud-prosjekt, og ha tilgangen `bigquery.JobUser` på prosjektet. Når du blir medlem av et nais team, får du også tilgang til et Google Cloud-prosjekt. Du kan lese mer på [nais sin dokumentasjon](https://docs.nais.io/) og [Google sin dokumentasjon](https://cloud.google.com/docs).
