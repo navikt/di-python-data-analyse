@@ -20,3 +20,12 @@ bigquery = "di_python_data_analyse.__main__:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.1",
+]
+
+[tool.ruff]
+include = ["*.py", "*.ipynb"]
+line-length = 120
