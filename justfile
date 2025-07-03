@@ -5,9 +5,9 @@ default:
 
 # Installerer nødvendige pakker for andre kommandoer
 bootstrap:
-    @printf "Installerer nødvendige pakker\n"
-    @uv --version || brew install uv
-    @nais --version || brew install nais || brew tap nais/tap
+    @printf "Sørger for at nødvendige pakker er installert\n"
+    @uv --version > /dev/null 2>&1 || brew install uv
+    @nais --version > /dev/null 2>&1 || brew install nais || brew tap nais/tap
 
 # Setter opp miljøet
 install: bootstrap
