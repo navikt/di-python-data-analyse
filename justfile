@@ -35,7 +35,7 @@ requirements:
     @uv run sync --no-dev
     @uv pip freeze > requirements.txt
     @uv run sync --dev
-    @if grep -q '^\-e' requirements.txt; then printf "Lokale pakker i requirements.txt (rader med -e) må fjernes manuelt.\n";fi
+    @grep -v '^-e ' requirements.txt > requirements.txt.temp && mv requirements.txt.temp requirements.txt
 
 # Test bigquerykobling
 test-bigquery *args:
