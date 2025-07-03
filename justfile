@@ -1,7 +1,5 @@
 default:
-    @just --list
-
-
+    @just --list --unsorted
 
 # Installerer nødvendige pakker for andre kommandoer
 bootstrap:
