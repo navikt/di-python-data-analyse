@@ -38,8 +38,8 @@ requirements:
     @grep -v '^-e ' requirements.txt > requirements.txt.temp && mv requirements.txt.temp requirements.txt
 
 # Test bigquerykobling
-test-bigquery *args:
-    @if [[ "{{args}}" == *"--auth"* ]]; then printf "Logger inn med nais...\n"; nais login; fi
+test-bigquery:
     @printf "Tester bigquerykobling\n"
+    @gcloud auth print-identity-token >/dev/null 2>&1 || nais login
     @uv run bigquery
 
