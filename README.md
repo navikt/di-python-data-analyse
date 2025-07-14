@@ -1,7 +1,6 @@
-# Python Dataanalyse - Data og Informasjonsforvaltning 
+# Python Dataanalyse - Data og Informasjonsforvaltning
 
 Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment som en standard for hvordan vi jobber med dataanalyse i Python i Data og Informasjonsforvaltning.
-
 
 ## Forberedelser
 
@@ -15,17 +14,23 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
     - gcloud projects list
     - gcloud config set project PROJECT_ID
 
-
-
 ## Kjør et skript
 
 I `__main__.py` ligger det kode som henter data fra et åpent datasett på BigQuery.
 Koden kan kjøres med `uv run python -m di_python_data_analyse`, eller med `uv run bigquery` som er definert under `[project.scripts]` i `pyproject.toml`.
-
 
 ## Legg til en ny avhengighet
 
 Prøv å legge til en ny avhengighet i prosjektet og ta den i bruk i `__main__.py`.
 
 ## Kort om nais og gcp
+
 For at du skal kunne kjøre spørringer mot BigQuery, så må du logge inn på et Google Cloud-prosjekt, og ha tilgangen `bigquery.JobUser` på prosjektet. Når du blir medlem av et nais team, får du også tilgang til et Google Cloud-prosjekt. Du kan lese mer på [nais sin dokumentasjon](https://docs.nais.io/) og [Google sin dokumentasjon](https://cloud.google.com/docs).
+
+## Henvendelser
+
+Spørsmål knyttet til koden eller repositoryet kan stilles som issues her på GitHub.
+
+### For Nav-ansatte
+
+Interne henvendelser kan sendes via Slack i kanalen #data-science-golden-path.
