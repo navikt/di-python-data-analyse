@@ -10,10 +10,10 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 3. Klon repoet med [GitHub CLI](https://cli.github.com/).
 4. Installer **just** med `brew install just`. Les mer om [just](https://github.com/casey/just).
 5. Kjør `just install` og du er klar til å kjøre scripts.
-- Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
+    - Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
 6. Kjør `nais login` og velg riktig prosjekt om du skal jobbe mot GCP.
-- gcloud projects list
-- gcloud config set project PROJECT_ID
+    - gcloud projects list
+    - gcloud config set project PROJECT_ID
 
 
 
