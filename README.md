@@ -33,4 +33,4 @@ Spørsmål knyttet til koden eller repositoryet kan stilles som issues her på G
 
 ### For Nav-ansatte
 
-Interne henvendelser kan sendes via Slack i kanalen #data-science-golden-path.
+Interne henvendelser kan sendes via Slack i kanalen [#data-science-golden-path](https://nav-it.slack.com/archives/C090Z1P4BM1).
