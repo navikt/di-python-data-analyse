@@ -1,1 +1,5 @@
-__pycache__
+__pycache__/
+.ruff_cache/
+.venv/
+dist/
+.jupytext-sync-ipynb/
