@@ -5,7 +5,7 @@ default:
 bootstrap:
     @printf "Sørger for at nødvendige pakker er installert\n"
     @uv --version > /dev/null 2>&1 || brew install uv
-    @nais --version > /dev/null 2>&1 || brew install nais || brew tap nais/tap
+    @nais --version > /dev/null 2>&1 || brew tap nais/tap || brew install nais
 
 # Setter opp miljøet
 install: bootstrap
