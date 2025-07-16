@@ -189,7 +189,6 @@ dependencies = [
     { name = "db-dtypes" },
     { name = "google-cloud-bigquery" },
     { name = "google-cloud-bigquery-storage" },
-    { name = "highcharts-core" },
     { name = "pandas" },
 ]
 
@@ -205,7 +204,6 @@ requires-dist = [
     { name = "db-dtypes", specifier = ">=1.4.3" },
     { name = "google-cloud-bigquery", specifier = ">=3.34.0" },
     { name = "google-cloud-bigquery-storage", specifier = ">=2.32.0" },
-    { name = "highcharts-core", specifier = ">=1.10.3" },
     { name = "pandas", specifier = ">=2.3.0" },
 ]
 
@@ -215,12 +213,6 @@ dev = [
     { name = "jupytext", specifier = ">=1.17.2" },
     { name = "ruff", specifier = ">=0.12.1" },
 ]
-
-[[package]]
-name = "esprima"
-version = "4.0.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cc/a1/50fccd68a12bcfc27adfc9969c090286670a9109a0259f3f70943390b721/esprima-4.0.1.tar.gz", hash = "sha256:08db1a876d3c2910db9cfaeb83108193af5411fc3a3a66ebefacd390d21323ee", size = 47021, upload-time = "2018-08-24T13:59:11.374Z" }
 
 [[package]]
 name = "executing"
@@ -406,20 +398,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/f6/59/9350a13804f2e407d76b3962c548e023639fc1545056e342c6bad0d4fd30/grpcio_status-1.73.1.tar.gz", hash = "sha256:928f49ccf9688db5f20cd9e45c4578a1d01ccca29aeaabf066f2ac76aa886668", size = 13664, upload-time = "2025-06-26T02:02:50.083Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2e/50/ee32e6073e2c3a4457be168e2bbf84d02ad9d2c18c4a578a641480c293d4/grpcio_status-1.73.1-py3-none-any.whl", hash = "sha256:538595c32a6c819c32b46a621a51e9ae4ffcd7e7e1bce35f728ef3447e9809b6", size = 14422, upload-time = "2025-06-26T02:02:08.415Z" },
-]
-
-[[package]]
-name = "highcharts-core"
-version = "1.10.3"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "esprima" },
-    { name = "requests" },
-    { name = "validator-collection" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e3/f7/f328ba742bf0cc03ef9ea6199aeea5debc1de982ff792fa3d135d307d35e/highcharts_core-1.10.3.tar.gz", hash = "sha256:05e7ad2792522412eef3e0c5aeeeb5aa268af5a6053ababbdc68d280aa58a307", size = 12112647, upload-time = "2025-03-03T15:53:24.316Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/32/f1/bb196ad1fa76a9ef10277dcc19aa3ff63a74e1d5fa0cdae2c0081a328f26/highcharts_core-1.10.3-py3-none-any.whl", hash = "sha256:fd1981ece27e4d1364e930a84deb08e67c9c4501a2a66915215f0873586befd3", size = 686902, upload-time = "2025-03-03T15:53:21.495Z" },
 ]
 
 [[package]]
@@ -1212,18 +1190,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
-]
-
-[[package]]
-name = "validator-collection"
-version = "1.5.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "jsonschema" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e0/18/037926fffcdb09dd9ccde56de6bbffa379270f2c8f5474857ad6c04b55f2/validator-collection-1.5.0.tar.gz", hash = "sha256:f9395cad9a30cb9864fa0c0d18a84daead1eb8807774f4e09f588f89b7dc77d8", size = 46010, upload-time = "2020-10-12T17:24:21.666Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/4c/cb/051b87d913beb43f7890b16e421965a1550d791637629893a7448bb2b832/validator_collection-1.5.0-py2.py3-none-any.whl", hash = "sha256:56f6dc65d86c2e5b8f04f22acedd33af2c233edc1082fe4d24fd3996bd19d0fe", size = 36418, upload-time = "2020-10-12T17:24:20.021Z" },
 ]
 
 [[package]]
