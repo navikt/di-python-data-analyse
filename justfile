@@ -27,6 +27,10 @@ format:
     @printf "Formaterer kode\n"
     @uv run ruff format .
 
+# Precommit
+precommit: install format lint
+    @printf "Precommit er ferdig\n"
+
 # Generer requirements.txt
 requirements:
     @printf "Genererer requirements.txt\n"

@@ -29,6 +29,18 @@ For å kunne kjøre spørringer mot BigQuery må du logge inn på et Google Clou
 Når du blir medlem av et nais team, får du også tilgang til et Google Cloud-prosjekt.
 Du kan lese mer på [nais sin dokumentasjon](https://docs.nais.io/) og [Google sin dokumentasjon](https://cloud.google.com/docs).
 
+## Formatering og linting
+Formålet med formatering er å gjøre koden mer lesbar og konsistent, mens linting hjelper oss med å oppdage potensielle feil og å forbedre kodekvaliteten.\
+Eksempler på formatering: `mellomrom, linjeskift, strengformatering, osv`.\
+Eksempler på linting: `ubrukte variabler, feil bruk av funksjoner, typesjekker, osv`.
+
+Vi anbefaler å bli enig om følgende som et minimum:
+- formatering- og lintingverktøy (Vi anbefaler `ruff` + vscode extension: `Ruff` fra Astral).
+- linjelengde (Vi anbefaler 120 tegn).
+
+I justfilen har vi satt på kommandoen : `precommit`, som kjører linting og formatering. 
+Her kan du legge til flere kommandoer du ønsker at skal kjøres før kode committes.
+
 ## Henvendelser
 
 Spørsmål knyttet til koden eller repositoryet kan stilles som issues her på GitHub.
