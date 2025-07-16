@@ -7,7 +7,7 @@ Dette repositoriet kan brukes for å validere lokalt pythonoppsett, og er ment s
 1. Sett opp maskinen ved å følge [Oppsett for ny Mac eller Linux](https://navikt.github.io/ny-i-nav/ny-unix.html) eller [Oppsett for ny Windows](https://navikt.github.io/ny-i-nav/ny-windows.html).
 2. Installer [VS Code](https://code.visualstudio.com/download).
 3. Klon repoet med [GitHub CLI](https://cli.github.com/).
-4. Installer **just** med `brew install just`. Les mer om [just](https://github.com/casey/just).
+4. Vi bruker **just** for å enkelt kjøre en rekke kommandoer. Installeres med `brew install just`. Les mer på [https://github.com/casey/just](https://github.com/casey/just).
 5. Kjør `just install` og du er klar til å kjøre scripts.
     - Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
 6. Kjør `nais login` og velg riktig prosjekt om du skal jobbe mot GCP.
