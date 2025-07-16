@@ -30,10 +30,7 @@ format:
 # Generer requirements.txt
 requirements:
     @printf "Genererer requirements.txt\n"
-    @uv sync --no-dev
-    @uv pip freeze > requirements.txt
-    @uv sync --dev
-    @grep -v '^-e ' requirements.txt > requirements.txt.temp && mv requirements.txt.temp requirements.txt
+    @uv export --no-emit-workspace --no-dev --no-annotate --no-header --no-hashes --output-file requirements.txt
 
 # Test bigquerykobling
 test-bigquery:
