@@ -25,7 +25,9 @@ Prøv å legge til en ny avhengighet i prosjektet og ta den i bruk i `__main__.p
 
 ## Kort om nais og gcp
 
-For at du skal kunne kjøre spørringer mot BigQuery, så må du logge inn på et Google Cloud-prosjekt, og ha tilgangen `bigquery.JobUser` på prosjektet. Når du blir medlem av et nais team, får du også tilgang til et Google Cloud-prosjekt. Du kan lese mer på [nais sin dokumentasjon](https://docs.nais.io/) og [Google sin dokumentasjon](https://cloud.google.com/docs).
+For å kunne kjøre spørringer mot BigQuery må du logge inn på et Google Cloud-prosjekt, og ha tilgangen `bigquery.JobUser` på prosjektet.
+Når du blir medlem av et nais team, får du også tilgang til et Google Cloud-prosjekt.
+Du kan lese mer på [nais sin dokumentasjon](https://docs.nais.io/) og [Google sin dokumentasjon](https://cloud.google.com/docs).
 
 ## Henvendelser
 
