@@ -1,10 +1,10 @@
 # Python Dataanalyse - Data og Informasjonsforvaltning
 
 **Dette repositoriet har følgende formål:**
+
 - Validere at lokalt Python-oppsett fungerer som forventet.
 - Vise verktøy og oppsett som gjør datautvikleropplevelsen bedre.
 - På sikt være en standard for datanalyse i Python i Data og Informasjonsforvaltning, med eksempler som kan brukes i andre prosjekter.
-
 
 ## Validere lokalt Python-oppsett
 
@@ -18,10 +18,10 @@ Det vil sikre at alle kan kjøre Python-kode på samme måte, og vil gi noe innf
 3. Klon repoet med [GitHub CLI](https://cli.github.com/).
 4. Vi bruker **just** for å enkelt kjøre en rekke kommandoer. Installeres med `brew install just`. Les mer på [https://github.com/casey/just](https://github.com/casey/just).
 5. Kjør `just install` og du er klar til å kjøre scripts.
-    - Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
+   - Alternativt kan du kjøre kommandoen som er listet opp under `bootstrap`og `install` i `justfile`
 6. Kjør `nais login` og velg riktig prosjekt om du skal jobbe mot GCP.
-    - `gcloud projects list`
-    - `gcloud config set project PROJECT_ID`
+   - `gcloud projects list`
+   - `gcloud config set project PROJECT_ID`
 
 ### Kjør et skript
 
@@ -41,15 +41,18 @@ Nada er et dataplattformteam i Nav som drifter [Datamarkedsplassen](https://data
 [Nada har egen dokumentasjon](https://docs.knada.io/) om Airflow, Jupyter notebooks mot onprem, Metabase og mer.
 
 ## Formatering og linting
+
 Formålet med formatering er å gjøre koden mer lesbar og konsistent, mens linting hjelper oss med å oppdage potensielle feil og å forbedre kodekvaliteten.\
 Eksempler på formatering: `mellomrom, linjeskift, strengformatering, osv`.\
 Eksempler på linting: `ubrukte variabler, feil bruk av funksjoner, typesjekker, osv`.
 
-Vi anbefaler å bli enig om følgende som et minimum:
-- formatering- og lintingverktøy (Vi anbefaler `ruff` + vscode extension: `Ruff` fra Astral).
-- linjelengde (Vi anbefaler 120 tegn).
+Dette repoet bruker ruff til formatering og linting.
+Innstillinger settes i pyproject.toml.
+For linting kan man inkludere og ekskluder regler under `tool.ruff.lint`.
+Ruff har et sett med default-regler som kan endre seg i nye versjoner.
+Det kan derfor være lurt å velge et spesifikt sett med regler.
 
-I justfilen har vi satt på kommandoen : `precommit`, som kjører linting og formatering. 
+I justfilen finnes kommandoen : `precommit`, som kjører linting og formatering.
 Her kan du legge til flere kommandoer du ønsker at skal kjøres før kode committes.
 
 
@@ -62,9 +65,10 @@ Kombinasjonen av disse to gir oss en god oversikt over endringer i prosjektet, f
 Dependabot konfigureres i `.github/dependabot.yaml`, og vil automatisk foreslå å oppdatere avhengighetene i prosjektet med pull requests.
 Ghep konfigureres i repoet `navikt/ghep`.
 
-
 ## Python-versjoner
+
 Vi spesifiserer Python-versjon på to måter:
+
 - `pyproject.toml`: minimum versjon prosjektet støtter
 - `.python-version`: spesifikk versjon vi bruker lokalt
 
@@ -72,7 +76,6 @@ Bruk samme Python-versjon lokalt som i produksjon (feks Airflow eller naisjob) f
 
 Eks: du kjører 3.13 lokalt, og spesifiserer det i `pyproject.toml`, men Airflow-instansen kjører 3.11.
 Da vil uv forsøke å laste ned 3.13 for hver kjøring i Airflow.
-
 
 ## Henvendelser
 

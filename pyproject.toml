@@ -33,3 +33,8 @@ dev = [
 [tool.ruff]
 include = ["*.py", "*.ipynb"]
 line-length = 120
+
+[tool.ruff.lint]
+select = []
+ignore = []
+fixable = []
