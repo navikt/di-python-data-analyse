@@ -3,11 +3,11 @@ default:
 
 # Installerer nødvendige pakker for andre kommandoer
 bootstrap:
-    @printf "Installerer nødvendige pakker\n"
     @uv --version > /dev/null 2>&1 || brew install uv
     @nais --version > /dev/null 2>&1 || brew tap nais/tap || brew install nais
+    @gcloud --version > /dev/null 2>&1 || brew install --cask google-cloud-sdk
 
-# Setter opp miljøet
+# Setter opp virtuelt python-miljø
 install: bootstrap
     @printf "Setter opp miljøet\n"
     @uv sync --dev
@@ -15,30 +15,33 @@ install: bootstrap
 # Oppgrader dependencies og setter opp miljøet på nytt
 update-dependencies: bootstrap
     @printf "Oppgraderer dependencies\n"
+    @printf "Husk å sjekke inn endringer i pyproject.toml og uv.lock"
     @uv sync --upgrade --dev
 
 # Kjører linting
-lint:
+lint: bootstrap install
     @printf "Linter kode\n"
     @uv run ruff check .
 
 # Formaterer koden
-format:
+format: bootstrap install
     @printf "Formaterer kode\n"
     @uv run ruff format .
 
 # Precommit
-precommit: install format lint
+precommit: bootstrap install format lint
     @printf "Precommit er ferdig\n"
 
 # Generer requirements.txt
-requirements:
+requirements: bootstrap install
     @printf "Genererer requirements.txt\n"
     @uv export --no-emit-workspace --no-dev --no-annotate --no-header --no-hashes --output-file requirements.txt
 
-# Test bigquerykobling
-test-bigquery:
-    @printf "Tester bigquerykobling\n"
+# Logger inn om nødvendig
+login: bootstrap
     @gcloud auth print-identity-token >/dev/null 2>&1 || nais login
-    @uv run bigquery
 
+# Test bigquerykobling
+test-bigquery: bootstrap install login
+    @printf "Tester bigquerykobling\n"
+    @uv run bigquery
