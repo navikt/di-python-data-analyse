@@ -4,7 +4,7 @@
 
 - Validere at lokalt Python-oppsett fungerer som forventet.
 - Vise verktøy og oppsett som gjør datautvikleropplevelsen bedre.
-- På sikt være en standard for datanalyse i Python i Data og Informasjonsforvaltning, med eksempler som kan brukes i andre prosjekter.
+- Det nærmeste vi har en standard for datanalyse med Python i Data og Informasjonsforvaltning, med eksempler som kan brukes i andre prosjekter.
 
 ## Validere lokalt Python-oppsett
 
@@ -66,6 +66,47 @@ Sett `python.analysis.typeCheckingMode` til `basic`, `standard` eller `strict` i
 
 ## Notebooks
 
+Mange er kjent med [Jupyter notebooks]() fra studier.
+Notebooks er nyttige for å gjøre utforskende data-analyse (EDA), men kommer med noen utfordringer.
+
+- Notebooks lagres som JSON i .ipynb-filer.
+  - a) Output fra git diff er ikke lesbar (må bruke egne verktøy for å få det lesbart)
+  - b) Resultater lagres rett i notebooken (må bruke egne verktøy for å fjerne output / passe på å trykke clear output før lagring)
+    - Det holder ikke at repoet er private/internal
+- JupyterLab legger ikke til rette for å skrive god kode
+  - c) Det er langt dårligere utviklerstøtte i JupyterLab enn i andre IDE'er
+
+For å komme rundt disse problemene kan vi
+
+1. Kjøre notebooks i VS Code
+2. Lagre notebooks som python-filer (.py)
+   - Hvis man jobber med åpne data og skal vise fram resultater via et github-repository er det OK å sjekke inn en .ipynb.
+     - Det fins også andre alternativer som Quarto og Marimo
+
+### Oppsett i VS Code
+
+Automatisk synkronisering mellom .py og .ipynb gjøres med [VS Code Jupytext Sync](https://github.com/caenrigen/vscode-jupytext-sync). Den bruker [Jupytext](https://jupytext.readthedocs.io/en/latest/).
+
+I `analyser/repos/` ligger det et minimalt eksempel på hvordan man kan strukturere en analyse.
+
+```
+repos
+    ├── analyse.py
+    ├── query.sql
+    └── utils.py
+```
+
+- analyse.py: Analyse-kode som kan kjøres som en notebook
+- query.py: SQL for å hente data
+- utils.py: Funksjoner som brukes i analyse-koden
+
+Åpne analyse.py, og søk deg fram til `Jupytext: Open as paired Notebook via Jupytext` i kommando-paletten (`Cmd` + `Shift` + `P`).
+Da får du opp en notebook som er synket toveis mot python-filen.
+I dette repoet er notebook-filer ignorert i .gitignore.
+Kjør `Notebook: Select Notebook kernel` i kommando-paletten og velg python-miljøet som ligger i .venv/bin/python.
+
+Optional: Sørg for at info om python-kjernen ikke lagres i python-filen: `jupytext --sync --opt notebook_metadata_filter="-kernelspec" FIL`
+
 ## Kort om dependabot og Ghep
 
 Dependabot hjelper oss å holde avhengighetene i prosjektet oppdatert, som er viktig for sikkerhet og stabilitet.
@@ -89,7 +130,7 @@ Da vil uv forsøke å laste ned 3.13 for hver kjøring i Airflow.
 
 ## Henvendelser
 
-Spørsmål knyttet til koden eller repositoryet kan stilles som issues her på GitHub.
+Spørsmål knyttet til koden eller repoet kan stilles som issues her på GitHub.
 
 ### For Nav-ansatte
 
