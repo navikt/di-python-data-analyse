@@ -55,6 +55,16 @@ Det kan derfor være lurt å velge et spesifikt sett med regler.
 I justfilen finnes kommandoen : `precommit`, som kjører linting og formatering.
 Her kan du legge til flere kommandoer du ønsker at skal kjøres før kode committes.
 
+## Typechecking
+
+Python fikk støtte for type hints i 3.5.
+Editoren din kan gi hint om typene til variabler, returverdier fra funksjoner og navn på argumenter.
+Se .vscode/settings.json.
+
+I tillegg kan Pylance sjekke typer og gi beskjed om feil bruk av typer i fanen `Problems` (ved siden av terminalen).
+Sett `python.analysis.typeCheckingMode` til `basic`, `standard` eller `strict` i VS Code settings for å skru det på.
+
+## Notebooks
 
 ## Kort om dependabot og Ghep
 
