@@ -1,0 +1,1 @@
+select * from `appsec-prod-624d.appsec.repos`

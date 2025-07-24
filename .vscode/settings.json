@@ -19,6 +19,11 @@
   "python.analysis.autoImportCompletions": true, // Tab for å importere moduler automatisk
   "python.analysis.typeCheckingMode": "standard",
   "python.defaultInterpreterPath": "${workspaceFolder}.venv/bin/python", // Prøver å bruke lokal python
+  "jupytextSync.pythonExecutable": "${workspaceFolder}/.venv/bin/python",
   "python.languageServer": "Pylance",
+  "jupytextSync.defaultFormats": {
+    "default": "ipynb,${ext}:percent",
+    ".ipynb": "ipynb,py:percent",
+  },
   "ruff.organizeImports": true
 }
