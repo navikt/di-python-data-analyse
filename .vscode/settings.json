@@ -1,0 +1,24 @@
+{
+  // Viser små hint i editoren
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+
+  // git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Annet
+
+  "github.copilot.enable": {
+    "ipynb": false // Ikke send notebook-innhold med potensiell sensitiv data til Copilot
+  },
+
+  "editor.minimap.size": "fill", // Minimap fyller hele høyden
+  "files.autoSave": "afterDelay", // Lagre filer automatisk
+  "python.analysis.autoImportCompletions": true, // Tab for å importere moduler automatisk
+  "python.analysis.typeCheckingMode": "standard",
+  "python.defaultInterpreterPath": "${workspaceFolder}.venv/bin/python", // Prøver å bruke lokal python
+  "python.languageServer": "Pylance",
+  "ruff.organizeImports": true
+}
