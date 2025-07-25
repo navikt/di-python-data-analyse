@@ -66,27 +66,25 @@ Sett `python.analysis.typeCheckingMode` til `basic`, `standard` eller `strict` i
 
 ## Notebooks
 
-Mange er kjent med [Jupyter notebooks]() fra studier.
+Mange er kjent med [Jupyter notebooks](https://jupyter.org/) fra studiene.
 Notebooks er nyttige for å gjøre utforskende data-analyse (EDA), men kommer med noen utfordringer.
+Et problem er at JupyterLab er en nettleserbasert IDE, hvor det ikke er tilrettelagt for å produsere god kode slik som i feks VS Code eller IntelliJ.
+Det største problemet er likevel at notebooks **lagrer cellene og celle-output** som JSON i .ipynb-filer.
 
-- Notebooks lagres som JSON i .ipynb-filer.
-  - a) Output fra git diff er ikke lesbar (må bruke egne verktøy for å få det lesbart)
-  - b) Resultater lagres rett i notebooken (må bruke egne verktøy for å fjerne output / passe på å trykke clear output før lagring)
-    - Det holder ikke at repoet er private/internal
-- JupyterLab legger ikke til rette for å skrive god kode
-  - c) Det er langt dårligere utviklerstøtte i JupyterLab enn i andre IDE'er
+   1. Celle-output skal ikke sjekkes inn i git og pushes til GitHub, fordi JSON-strukturen kan inneholde data som ikke skal deles på internett
+       - At repoet er privat eller internal er ikke godt nok for å sikre at data ikke deles
+       - Dermed må du alltid manuelt trykke på "Clear Output" før du lagrer og committer, eller sette opp ekstra verktøy for å fjerne output
+   2. JSON-formatet på cellene gjør det vanskelig å følge med på endringer i koden
+       - Å bruke git diff gir ingen lesbar oversikt
+       - Samarbeid med andre blir komplisert ved feks merging av endringer
+       - Her finnes det også egne verktøy som kan hjelpe, men det gir mer overhead
 
-For å komme rundt disse problemene kan vi
-
-1. Kjøre notebooks i VS Code
-2. Lagre notebooks som python-filer (.py)
-   - Hvis man jobber med åpne data og skal vise fram resultater via et github-repository er det OK å sjekke inn en .ipynb.
-     - Det fins også andre alternativer som Quarto og Marimo
+For å løse disse problemene **jobber vi heller med rene python-filer som vi lokalt åpner og kjører som notebooks**.
+I VS Code er det god støtte for dette, og resultatet er at git ser endringer i .py-filer og vi analyserer data i et notebook-likt format.
 
 ### Oppsett i VS Code
 
 Automatisk synkronisering mellom .py og .ipynb gjøres med [VS Code Jupytext Sync](https://github.com/caenrigen/vscode-jupytext-sync). Den bruker [Jupytext](https://jupytext.readthedocs.io/en/latest/).
-
 I `analyser/repos/` ligger det et minimalt eksempel på hvordan man kan strukturere en analyse.
 
 ```
@@ -97,7 +95,7 @@ repos
 ```
 
 - analyse.py: Analyse-kode som kan kjøres som en notebook
-- query.py: SQL for å hente data
+- query.sql: SQL for å hente data
 - utils.py: Funksjoner som brukes i analyse-koden
 
 Åpne analyse.py, og søk deg fram til `Jupytext: Open as paired Notebook via Jupytext` i kommando-paletten (`Cmd` + `Shift` + `P`).
@@ -105,7 +103,7 @@ Da får du opp en notebook som er synket toveis mot python-filen.
 I dette repoet er notebook-filer ignorert i .gitignore.
 Kjør `Notebook: Select Notebook kernel` i kommando-paletten og velg python-miljøet som ligger i .venv/bin/python.
 
-Optional: Sørg for at info om python-kjernen ikke lagres i python-filen: `jupytext --sync --opt notebook_metadata_filter="-kernelspec" FIL`
+Optional: Sørg for at info om python-kjernen ikke lagres i python-filen ved å kjøre `jupytext --sync --opt notebook_metadata_filter="-kernelspec" <FILNAVN>`.
 
 ## Kort om dependabot og Ghep
 
