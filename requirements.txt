@@ -1,8 +1,8 @@
-cachetools==6.2.0
+cachetools==6.2.1
 certifi==2025.10.5
 charset-normalizer==3.4.3
 db-dtypes==1.4.3
-google-api-core==2.25.2
+google-api-core==2.26.0
 google-auth==2.41.1
 google-cloud-bigquery==3.38.0
 google-cloud-bigquery-storage==2.33.1
@@ -12,7 +12,7 @@ google-resumable-media==2.7.2
 googleapis-common-protos==1.70.0
 grpcio==1.75.1
 grpcio-status==1.75.1
-idna==3.10
+idna==3.11
 numpy==2.3.3
 packaging==25.0
 pandas==2.3.3
