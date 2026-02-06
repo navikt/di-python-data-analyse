@@ -1,8 +1,10 @@
 certifi==2026.1.4
+cffi==2.0.0 ; platform_python_implementation != 'PyPy'
 charset-normalizer==3.4.4
+cryptography==46.0.4
 db-dtypes==1.5.0
 google-api-core==2.29.0
-google-auth==2.47.0
+google-auth==2.48.0
 google-cloud-bigquery==3.40.0
 google-cloud-bigquery-storage==2.36.0
 google-cloud-core==2.5.0
@@ -12,14 +14,15 @@ googleapis-common-protos==1.72.0
 grpcio==1.76.0
 grpcio-status==1.76.0
 idna==3.11
-numpy==2.4.1
-packaging==25.0
+numpy==2.4.2
+packaging==26.0
 pandas==2.3.3
-proto-plus==1.27.0
-protobuf==6.33.4
+proto-plus==1.27.1
+protobuf==6.33.5
 pyarrow==23.0.0
 pyasn1==0.6.2
 pyasn1-modules==0.4.2
+pycparser==3.0 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy'
 python-dateutil==2.9.0.post0
 pytz==2025.2
 requests==2.32.5
