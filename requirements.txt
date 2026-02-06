@@ -16,7 +16,7 @@ grpcio-status==1.76.0
 idna==3.11
 numpy==2.4.2
 packaging==26.0
-pandas==2.3.3
+pandas==3.0.0
 proto-plus==1.27.1
 protobuf==6.33.5
 pyarrow==23.0.0
