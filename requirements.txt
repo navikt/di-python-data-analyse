@@ -16,9 +16,9 @@ grpcio-status==1.80.0
 idna==3.11
 numpy==2.4.4
 packaging==26.0
-pandas==2.3.3
+pandas==3.0.2
 proto-plus==1.27.2
-protobuf==6.33.6
+protobuf==7.34.1
 pyarrow==23.0.1
 pyasn1==0.6.3
 pyasn1-modules==0.4.2
