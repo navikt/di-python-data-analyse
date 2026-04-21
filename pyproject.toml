@@ -13,7 +13,7 @@ dependencies = [
     "db-dtypes>=1.4.3",
     "google-cloud-bigquery>=3.34.0",
     "google-cloud-bigquery-storage>=2.32.0",
-    "pandas>=2.3.0",
+    "pandas>=3.0.2",
 ]
 
 [project.scripts]
@@ -27,7 +27,7 @@ build-backend = "hatchling.build"
 dev = [
     "ipykernel>=6.29.5",
     "jupytext>=1.17.2",
-    "ruff>=0.12.1",
+    "ruff>=0.15.11",
 ]
 
 [tool.ruff]
