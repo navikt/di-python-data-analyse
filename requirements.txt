@@ -29,4 +29,4 @@ requests==2.33.1
 six==1.17.0
 typing-extensions==4.15.0
 tzdata==2026.1
-urllib3==2.6.3
+urllib3==2.7.0
