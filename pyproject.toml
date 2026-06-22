@@ -10,10 +10,10 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "db-dtypes>=1.4.3",
-    "google-cloud-bigquery>=3.34.0",
-    "google-cloud-bigquery-storage>=2.32.0",
-    "pandas>=2.3.0",
+    "db-dtypes>=1.7.0",
+    "google-cloud-bigquery>=3.42.0",
+    "google-cloud-bigquery-storage>=2.39.0",
+    "pandas>=3.0.3",
 ]
 
 [project.scripts]
@@ -25,9 +25,9 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "ipykernel>=6.29.5",
-    "jupytext>=1.17.2",
-    "ruff>=0.12.1",
+    "ipykernel>=7.3.0",
+    "jupytext>=1.19.4",
+    "ruff>=0.15.18",
 ]
 
 [tool.ruff]
