@@ -1,4 +1,4 @@
-certifi==2026.6.17
+certifi==2026.10.19
 cffi==2.1.0 ; platform_python_implementation != 'PyPy'
 charset-normalizer==3.4.9
 cryptography==50.0.0
