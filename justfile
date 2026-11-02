@@ -45,3 +45,8 @@ login: bootstrap
 test-bigquery: bootstrap install login
     @printf "Tester bigquerykobling\n"
     @uv run bigquery
+
+
+# kun oppdaterer uv.lock
+update:
+    uv lock --upgrade
