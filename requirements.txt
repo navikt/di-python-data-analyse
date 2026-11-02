@@ -20,7 +20,7 @@ pandas==3.0.3
 proto-plus==1.28.1
 protobuf==7.35.1
 pyarrow==25.0.0
-pyasn1==0.6.4
+pyasn1==0.6.5
 pyasn1-modules==0.4.2
 pycparser==3.0 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy'
 python-dateutil==2.9.0.post0
